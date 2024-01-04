@@ -98,7 +98,7 @@ main = hspec $ do
               , pgSlotName = "test-slot"
               , pgUpdateDelay = "43"
               }
-        pgConnectionString settings `shouldBe` "user=foo pass=bar dbname=test host=hostname port=5432 replication=database"
+        pgConnectionString settings `shouldBe` "user=foo password=bar dbname=test host=hostname port=5432 replication=database"
 
       it "should omit the password when not specified" $ do
         let settings

@@ -22,7 +22,7 @@ data PgSettings
 pgConnectionString :: PgSettings -> ByteString
 pgConnectionString PgSettings {..} = B.intercalate " "
   [ "user=" <> B.pack pgUser
-  , maybe "" (\pgPass -> "pass=" <> B.pack pgPass) pgPassword
+  , maybe "" (\pgPass -> "password=" <> B.pack pgPass) pgPassword
   , "dbname=" <> B.pack pgDbName
   , "host=" <> B.pack pgHost
   , "port=" <> B.pack pgPort
